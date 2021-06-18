@@ -117,4 +117,12 @@ public class Auto {
     public void setYtVideo(String ytVideo) {
         this.ytVideo = ytVideo;
     }
+
+    @Override
+    public String toString() {
+        return "Auto{" +
+                "marke='" + marke + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
