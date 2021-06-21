@@ -81,6 +81,49 @@ public class DataBaseManager {
         return allAutos;
     }
 
+    public boolean updateAuto(Auto p){
+        boolean result = false;
+        PreparedStatement preparedStatement;
+        String stmt_update =
+        "UPDATE Auto SET " +
+                " marke = ?," +
+                " nameAuto = ?," +
+                " preis = ?," +
+                " ps = ?," +
+                " hubraum = ?," +
+                " gewicht = ?," +
+                " treibstoff = ?," +
+                " antrieb = ?," +
+                " color = ?," +
+                " ytVideo = ?" +
+
+                " WHERE idAuto = ?";
+        ResultSet resultSet;
+        int numRows = 0;
+        try ( Connection con = this.createConnection()){
+            preparedStatement = con.prepareStatement(stmt_update);
+            preparedStatement.setString(1, p.getMarke());
+            preparedStatement.setString(2, p.getName());
+            preparedStatement.setInt(3, p.getPreis());
+            preparedStatement.setInt(4, p.getPs());
+            preparedStatement.setInt(5, p.getHubraum());
+            preparedStatement.setInt(6, p.getGewicht());
+            preparedStatement.setString(7, p.getTreibstoff());
+            preparedStatement.setString(8, p.getAntrieb());
+            preparedStatement.setString(9, p.getColor());
+            preparedStatement.setString(10, p.getYtVideo());
+
+
+            preparedStatement.setInt(11, p.getId());
+            numRows = preparedStatement.executeUpdate();
+            if ( numRows == 1 ){
+                result = true;
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return result;
+    }
 
 /*    public boolean updateAuto(Auto p){
         boolean result = false;
