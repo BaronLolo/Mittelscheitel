@@ -1,8 +1,47 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ListView fx:id="lvAutos" prefHeight="700.0" prefWidth="190.0" />
+      <VBox prefHeight="700.0" prefWidth="719.0">
+         <children>
+            <HBox prefHeight="332.0" prefWidth="715.0">
+               <children>
+                  <VBox prefHeight="300.0" prefWidth="87.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="100.0" text="Marke:" />
+                        <Label prefHeight="30.0" prefWidth="100.0" text="Name: " />
+                        <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Preis:" />
+                        <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="PS:" />
+                        <Label prefHeight="30.0" prefWidth="100.0" text="Hubraum:" />
+                        <Label prefHeight="30.0" prefWidth="100.0" text="Gewicht:" />
+                        <Label prefHeight="30.0" prefWidth="100.0" text="Treibstoff" />
+                        <Label prefHeight="30.0" prefWidth="100.0" text="Antrieb" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="300.0" prefWidth="239.0">
+                     <children>
+                        <Label fx:id="lbMarkeOutput" prefHeight="30.0" prefWidth="240.0" />
+                        <Label fx:id="lbNameOutput" prefHeight="30.0" prefWidth="240.0" />
+                        <Label fx:id="lbPreisOutput" prefHeight="30.0" prefWidth="240.0" />
+                        <Label fx:id="lbPsOutput" prefHeight="30.0" prefWidth="240.0" />
+                        <Label fx:id="lbHubraumOutput" prefHeight="30.0" prefWidth="240.0" />
+                        <Label fx:id="lbGewichtOutput" prefHeight="30.0" prefWidth="240.0" />
+                        <Label fx:id="lbTreibstoffOuput" prefHeight="30.0" prefWidth="240.0" />
+                        <Label fx:id="lbAntriebOutput" prefHeight="30.0" prefWidth="240.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <MediaView fx:id="wvYtVideo" fitHeight="400.0" fitWidth="720.0" />
+         </children>
+      </VBox>
+   </children>
+</HBox>
