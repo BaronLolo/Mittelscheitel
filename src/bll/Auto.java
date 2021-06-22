@@ -27,6 +27,20 @@ public class Auto {
         this.ytVideo = ytVideo;
     }
 
+    public Auto(String marke, String name, int preis, int ps, int hubraum, int gewicht, String treibstoff, String antrieb, String color, String ytVideo) {
+        this.id = -1;
+        this.marke = marke;
+        this.name = name;
+        this.preis = preis;
+        this.ps = ps;
+        this.hubraum = hubraum;
+        this.gewicht = gewicht;
+        this.treibstoff = treibstoff;
+        this.antrieb = antrieb;
+        this.color = color;
+        this.ytVideo = ytVideo;
+    }
+
     public Auto() {
     }
 
