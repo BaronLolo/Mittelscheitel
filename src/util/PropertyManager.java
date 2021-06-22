@@ -1,8 +1,14 @@
 package util;
 
+import bll.Auto;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Properties;
 
 public class PropertyManager {
@@ -41,3 +47,13 @@ public class PropertyManager {
         return this.props.getProperty(key, defaultValue);
     }
 }
+
+
+
+
+
+
+
+
+
+

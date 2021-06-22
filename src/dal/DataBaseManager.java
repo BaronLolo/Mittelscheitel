@@ -125,6 +125,77 @@ public class DataBaseManager {
         return result;
     }
 
+    public boolean addAuto(Auto p){
+        boolean result = false;
+        PreparedStatement preparedStatement;
+        String stmt_update =
+                "INSERT INTO Auto (marke, nameAuto, preis, ps, hubraum, gewicht, treibstoff, antrieb, color, ytVideo)" +
+                        " VALUES ( " +
+                        "?," +
+                        "?," +
+                        "?," +
+                        "?," +
+                        "?," +
+                        "?," +
+                        "?," +
+                        "?," +
+                        "?," +
+                        "?" +
+                        ")";
+        ResultSet resultSet;
+        int numRows = 0;
+        int id = -1;
+        try ( Connection con = this.createConnection()){
+            preparedStatement = con.prepareStatement(stmt_update);
+            preparedStatement.setString(1, p.getMarke());
+            preparedStatement.setString(2, p.getName());
+            preparedStatement.setInt(3, p.getPreis());
+            preparedStatement.setInt(4, p.getPs());
+            preparedStatement.setInt(5, p.getHubraum());
+            preparedStatement.setInt(6, p.getGewicht());
+            preparedStatement.setString(7, p.getTreibstoff());
+            preparedStatement.setString(8, p.getAntrieb());
+            preparedStatement.setString(9, p.getColor());
+            preparedStatement.setString(10, p.getYtVideo());
+
+
+            preparedStatement.execute();
+            resultSet = preparedStatement.getGeneratedKeys();
+
+            if ( resultSet.next()){
+                id = resultSet.getInt(1);
+                p.setId(id);
+                result = true;
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return result;
+    }
+
+    public boolean deleteAuto(Auto p){
+        boolean result = false;
+        PreparedStatement preparedStatement;
+        String stmt_update =
+                "DELETE Auto WHERE idAuto = ?";
+        ResultSet resultSet;
+        int numRows = 0;
+        try ( Connection con = this.createConnection()){
+            preparedStatement = con.prepareStatement(stmt_update);
+            preparedStatement.setInt(1, p.getId());
+
+            numRows = preparedStatement.executeUpdate();
+            if ( numRows > 0 ){
+                result = true;
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return result;
+    }
+
+
+
 /*    public boolean updateAuto(Auto p){
         boolean result = false;
         PreparedStatement preparedStatement;

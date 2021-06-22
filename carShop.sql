@@ -1,10 +1,8 @@
 DROP TABLE auto CASCADE CONSTRAINTs;
 drop sequence seqAuto;
 
-create sequence seqAuto increment by 1 start with 1;
-
 create table auto (
-    idAuto integer,
+    idAuto NUMBER(4) GENERATED ALWAYS AS IDENTITY,
     marke varchar(20),
     nameAuto varchar(30),
     preis integer, 
@@ -17,4 +15,4 @@ create table auto (
     ytVideo varchar(200)
 );
 
-Insert into auto values(seqAuto.nextval, 'Nissan', 'S15', 30000, 300, 3000, 1400, 'Benzin', 'Heckantrieb', 'schwarz', 'https://www.youtube.com/watch?v=9YqwMjm6xP4');
+Insert into auto values('Nissan', 'S15', 30000, 300, 3000, 1400, 'Benzin', 'Heckantrieb', 'schwarz', 'https://www.youtube.com/watch?v=9YqwMjm6xP4');
