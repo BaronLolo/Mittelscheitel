@@ -107,4 +107,7 @@ values('Toyota', 'Soarer III (facelift 2005) 4.0 i V8 32V GT', 17000, 265, 3969,
 Insert into auto (marke, nameAuto, preis, ps, hubraum, gewicht, treibstoff, antrieb, color, ytVideo) 
 values('Volkswagen', 'Golf VII Sportsvan (facelift 2017) 1.6 TDI SCR', 10000, 116, 1598, 1445, 'Diesel', 'Vorderradantrieb', 'silber', 'https://www.youtube.com/watch?v=L_LUpnjgPso&t=2773s');
 
+commit;
  
+ 
+ select * from auto;
