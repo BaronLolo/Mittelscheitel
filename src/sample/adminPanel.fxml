@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.adminPanelController">
+   <children>
+      <ListView fx:id="lvAutos" prefHeight="200.0" prefWidth="200.0" />
+      <VBox prefHeight="400.0" prefWidth="234.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="76.0" text=" Marke" />
+                  <TextField fx:id="tbMarke" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="76.0" text=" Name" />
+                  <TextField fx:id="tbName" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="76.0" text=" Preis" />
+                  <TextField fx:id="tbPreis" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="76.0" text=" PS" />
+                  <TextField fx:id="tbPS" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="76.0" text=" Hubraum" />
+                  <TextField fx:id="tbHubraum" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="76.0" text=" Gewicht" />
+                  <TextField fx:id="tbGewicht" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="76.0" text=" Treibstoff" />
+                  <TextField fx:id="tbTreibstoff" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="76.0" text=" Antrieb" />
+                  <TextField fx:id="tbAntrieb" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="76.0" text=" YtVideo" />
+                  <TextField fx:id="tbYtVideo" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="400.0" prefWidth="99.0">
+         <children>
+            <Button fx:id="addAction" mnemonicParsing="false" onAction="#btnAdd" prefHeight="23.0" prefWidth="90.0" text="Add">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#btnDelete" prefWidth="90.0" text="Delete">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#btnUpdate" prefWidth="90.0" text="Update">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#btnCancle" prefWidth="90.0" text="Cancel">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#btnLeave" prefWidth="90.0" text="Leave">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</HBox>

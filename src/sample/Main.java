@@ -16,6 +16,7 @@ public class Main extends Application {
         primaryStage.setTitle("Car Shop");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+
     }
 
 
