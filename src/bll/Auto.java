@@ -134,9 +134,18 @@ public class Auto {
 
     @Override
     public String toString() {
-        return "Auto{" +
-                "marke='" + marke + '\'' +
-                ", name='" + name + '\'' +
-                '}';
+        return name;
+    }
+
+    public String getRechnung(){
+        return "Mittelscheitel-Carshop\n\nMarke: "+ this.marke +
+                "\nName: " + this.name +
+                "\nPreis: " + this.preis +
+                "\nPS: " + this.ps +
+                "\nHubraum: " + this.hubraum +
+                "\nGewicht: " + this.gewicht +
+                "\nTreibstoff: " + this.treibstoff +
+                "\nAntrieb: " + this.antrieb +
+                "\n\nThank you!!!!!";
     }
 }
