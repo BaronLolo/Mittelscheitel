@@ -151,5 +151,14 @@ public class adminPanelController implements Initializable {
             }
         }
 
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+            Stage window = new Stage();
+            window.setTitle("Carshop AdminPanel");
+            window.setScene(new Scene(root));
+            window.show();
+        } catch (Exception exception){
+            System.out.println(exception);
+        }
     }
 }
