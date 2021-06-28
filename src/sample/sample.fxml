@@ -5,11 +5,11 @@
 <?import javafx.scene.control.ColorPicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.media.MediaView?>
 
-<HBox fx:controller="sample.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <ListView fx:id="lvAutos" prefHeight="700.0" prefWidth="190.0" />
       <VBox prefHeight="700.0" prefWidth="719.0">
@@ -43,21 +43,21 @@
                         <Label fx:id="lbTreibstoffOuput" prefHeight="30.0" prefWidth="240.0" />
                         <Label fx:id="lbAntriebOutput" prefHeight="30.0" prefWidth="240.0" />
                         <ColorPicker onAction="#colorPicker" />
-                     </children>
-                  </VBox>
-                  <VBox alignment="BOTTOM_LEFT" prefHeight="300.0" prefWidth="249.0">
-                     <children>
-                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#btnKaufenClicked" prefHeight="30.0" prefWidth="130.0" text="Kaufen">
+                        <Button mnemonicParsing="false" onAction="#btnKaufenClicked" prefHeight="30.0" prefWidth="125.0" text="Kaufen">
                            <VBox.margin>
-                              <Insets bottom="25.0" left="5.0" right="5.0" top="5.0" />
+                              <Insets top="15.0" />
                            </VBox.margin>
                         </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="332.0" prefWidth="236.0">
+                     <children>
+                        <TextArea fx:id="taErrorLog" prefHeight="318.0" prefWidth="236.0" />
                      </children>
                   </VBox>
                   <Button mnemonicParsing="false" onAction="#btnAdminClicked" prefHeight="30.0" prefWidth="130.0" text="Admin" />
                </children>
             </HBox>
-            <MediaView fx:id="wvYtVideo" fitHeight="400.0" fitWidth="720.0" />
          </children>
       </VBox>
    </children>
