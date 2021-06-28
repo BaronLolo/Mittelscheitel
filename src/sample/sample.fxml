@@ -12,7 +12,7 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <ListView fx:id="lvAutos" prefHeight="700.0" prefWidth="190.0" />
+      <ListView fx:id="lvAutos" prefHeight="700.0" prefWidth="290.0" />
       <VBox prefHeight="700.0" prefWidth="719.0">
          <children>
             <HBox prefHeight="332.0" prefWidth="715.0">
@@ -43,7 +43,7 @@
                         <Label fx:id="lbGewichtOutput" prefHeight="30.0" prefWidth="240.0" />
                         <Label fx:id="lbTreibstoffOuput" prefHeight="30.0" prefWidth="240.0" />
                         <Label fx:id="lbAntriebOutput" prefHeight="30.0" prefWidth="240.0" />
-                        <ColorPicker onAction="#colorPicker" />
+                        <ColorPicker fx:id="colorPicker" onAction="#colorPicker" />
                         <Button mnemonicParsing="false" onAction="#btnKaufenClicked" prefHeight="30.0" prefWidth="125.0" text="Kaufen">
                            <VBox.margin>
                               <Insets top="15.0" />
