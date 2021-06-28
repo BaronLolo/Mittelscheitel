@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.media.MediaView?>
 
-
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<HBox fx:controller="sample.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ListView fx:id="lvAutos" prefHeight="700.0" prefWidth="190.0" />
       <VBox prefHeight="700.0" prefWidth="719.0">
@@ -24,7 +26,11 @@
                         <Label prefHeight="30.0" prefWidth="100.0" text="Gewicht:" />
                         <Label prefHeight="30.0" prefWidth="100.0" text="Treibstoff" />
                         <Label prefHeight="30.0" prefWidth="100.0" text="Antrieb" />
+                        <Label prefHeight="30.0" prefWidth="100.0" text="Color" />
                      </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
                   </VBox>
                   <VBox prefHeight="300.0" prefWidth="239.0">
                      <children>
@@ -36,8 +42,19 @@
                         <Label fx:id="lbGewichtOutput" prefHeight="30.0" prefWidth="240.0" />
                         <Label fx:id="lbTreibstoffOuput" prefHeight="30.0" prefWidth="240.0" />
                         <Label fx:id="lbAntriebOutput" prefHeight="30.0" prefWidth="240.0" />
+                        <ColorPicker onAction="#colorPicker" />
                      </children>
                   </VBox>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="300.0" prefWidth="249.0">
+                     <children>
+                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#btnKaufenClicked" prefHeight="30.0" prefWidth="130.0" text="Kaufen">
+                           <VBox.margin>
+                              <Insets bottom="25.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#btnAdminClicked" prefHeight="30.0" prefWidth="130.0" text="Admin" />
                </children>
             </HBox>
             <MediaView fx:id="wvYtVideo" fitHeight="400.0" fitWidth="720.0" />
