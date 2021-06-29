@@ -43,7 +43,7 @@
                         <Label fx:id="lbGewichtOutput" prefHeight="30.0" prefWidth="240.0" />
                         <Label fx:id="lbTreibstoffOuput" prefHeight="30.0" prefWidth="240.0" />
                         <Label fx:id="lbAntriebOutput" prefHeight="30.0" prefWidth="240.0" />
-                        <ColorPicker fx:id="colorPicker" onAction="#colorPicker" />
+                        <ColorPicker fx:id="colorPicker" />
                         <Button mnemonicParsing="false" onAction="#btnKaufenClicked" prefHeight="30.0" prefWidth="125.0" text="Kaufen">
                            <VBox.margin>
                               <Insets top="15.0" />
