@@ -145,7 +145,6 @@ public class Auto {
                 "\nHubraum: " + this.hubraum +
                 "\nGewicht: " + this.gewicht +
                 "\nTreibstoff: " + this.treibstoff +
-                "\nAntrieb: " + this.antrieb +
-                "\n\nThank you!!!!!";
+                "\nAntrieb: " + this.antrieb;
     }
 }
