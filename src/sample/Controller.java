@@ -7,11 +7,15 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.web.WebView;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -55,6 +59,21 @@ public class Controller implements Initializable {
 
     @FXML
     private void btnAdminClicked(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("adminPanel.fxml"));
+            Stage window = new Stage();
+            window.setTitle("Carshop AdminPanel");
+            window.setScene(new Scene(root));
+            window.showAndWait();
+            _update();
+        } catch (Exception exception){
+            System.out.println(exception);
+        }
+    }
+
+    private void _update(){
+        cars = new ArrayList<>(DataBaseManager.getInstance().getAllAutos());
+        showCars();
     }
 
     @Override
@@ -77,6 +96,9 @@ public class Controller implements Initializable {
     }
 
     private void showCarsProperties(){
+        if (currentAuto == null) {
+            return;
+        }
         lbMarkeOutput.setText(currentAuto.getMarke());
         lbNameOutput.setText(currentAuto.getName());
         lbPreisOutput.setText(String.valueOf(currentAuto.getPreis()));

@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
@@ -50,6 +51,8 @@ public class adminPanelController implements Initializable {
     private ListView<Auto> lvAutos;
     private List<Auto> cars;
     private Auto currentAuto;
+    @FXML
+    private Button btnLeave;
 
 
     @Override
@@ -151,14 +154,7 @@ public class adminPanelController implements Initializable {
             }
         }
 
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-            Stage window = new Stage();
-            window.setTitle("Carshop AdminPanel");
-            window.setScene(new Scene(root));
-            window.show();
-        } catch (Exception exception){
-            System.out.println(exception);
-        }
+        Stage stage = (Stage) btnLeave.getScene().getWindow();
+        stage.close();
     }
 }

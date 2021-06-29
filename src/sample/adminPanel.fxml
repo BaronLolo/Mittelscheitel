@@ -87,7 +87,7 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#btnLeave" prefWidth="90.0" text="Leave">
+            <Button mnemonicParsing="false" fx:id="btnLeave" onAction="#btnLeave" prefWidth="90.0" text="Leave">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
